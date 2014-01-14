@@ -38,8 +38,9 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="S-Innovations.WindowsAzure.Publisher.Plugins">
-      <HintPath>..\packages\SInnovations.WindowsAzure.Publisher.Plugins.2.0.1-ci-1401143\lib\net45\S-Innovations.WindowsAzure.Publisher.Plugins.dll</HintPath>
+    <Reference Include="S-Innovations.WindowsAzure.Publisher.Plugins, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SInnovations.WindowsAzure.Publisher.Plugins.2.0.1-ci-1401144\lib\net45\S-Innovations.WindowsAzure.Publisher.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
