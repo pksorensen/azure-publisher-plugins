@@ -86,12 +86,12 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
         [Display(Name = "SubscriptionManagementCertificate", Order = 1)]
         [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.Thumbprint", IgnoreWhenParsing = true)]
-        [CloudServiceCertificateAttribute(SettingName = "Composite.WindowsAzure.OpenCMS.Subscription", IsManagementCertificate=true)]
+        [CloudServiceCertificateAttribute(Name = "Composite.WindowsAzure.OpenCMS.Subscription", IsManagementCertificate=true)]
         public string SubscriptionManagementCertificate { get; set; }
 
         [DeploymentSetting(SettingName = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.CertificateThumbprint", IgnoreWhenParsing = true)]
         [Display(Name = "RemoteDebuggerCertificate", Order = 2)]
-        [CloudServiceCertificateAttribute(SettingName = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation", IsDeploymentCertificate=true)]
+        [CloudServiceCertificateAttribute(Name = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation", IsDeploymentCertificate=true)]
         public string RemoteDebuggerCertificate { get; set; }
 
         [Display(Name = "Blob Storage Connection String", Order = 3)]
@@ -106,6 +106,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
         [Display(Name = "DnsMadeEasyKey", Order = 5)]
         public string test { get; set; }
 
+        [WindowsAzureSubscription]
         [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.SubscriptionId")]
         [Display(Name = "SubscriptionId", Order = 6)]
         public string SubscriptionId { get; set; }
