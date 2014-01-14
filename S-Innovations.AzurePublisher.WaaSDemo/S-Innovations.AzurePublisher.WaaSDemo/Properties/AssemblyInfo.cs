@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("S-Innovations.AzurePublisher.WaaSDemo")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("The Website As a Service Demo Backend")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TheWCDC")]
 [assembly: AssemblyProduct("S-Innovations.AzurePublisher.WaaSDemo")]
