@@ -17,12 +17,13 @@ namespace SInnovations.AzurePublisher.TheWCDCDemo2
         [Required]
         public string DeploymentName { get; set; }
 
-        public Uri GetPackageUri(System.Xml.Linq.XDocument configuration, string size = "ExtraSmall")
+
+        public void ManipulateConfiguration(System.Xml.Linq.XDocument configuration)
         {
             throw new NotImplementedException();
         }
 
-        public void ManipulateConfiguration(System.Xml.Linq.XDocument configuration)
+        public Task<Uri> GetPackageUriAsync(System.Xml.Linq.XDocument configuration, string size = "ExtraSmall")
         {
             throw new NotImplementedException();
         }

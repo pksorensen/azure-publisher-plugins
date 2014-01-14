@@ -34,7 +34,7 @@
       <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
     </Reference>
     <Reference Include="S-Innovations.WindowsAzure.Publisher.Plugins">
-      <HintPath>..\packages\SInnovations.WindowsAzure.Publisher.Plugins.1.0.1\lib\net45\S-Innovations.WindowsAzure.Publisher.Plugins.dll</HintPath>
+      <HintPath>..\packages\SInnovations.WindowsAzure.Publisher.Plugins.2.0.1-ci-1401142\lib\net45\S-Innovations.WindowsAzure.Publisher.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
