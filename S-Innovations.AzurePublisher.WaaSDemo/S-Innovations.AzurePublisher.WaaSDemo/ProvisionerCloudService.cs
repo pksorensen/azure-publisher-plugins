@@ -40,7 +40,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
     }
 
     [DisplayName("Provisioner Backend")]
-    public class ProvisionerCloudService : ICloudServiceDeploymentModel
+    public class ProvisionerCloudService : ICloudServiceDeploymentModel, ICanUpgrade
     {
 
         public async Task<Uri> GetPackageUriAsync(XDocument configuration, string size = "ExtraSmall")
