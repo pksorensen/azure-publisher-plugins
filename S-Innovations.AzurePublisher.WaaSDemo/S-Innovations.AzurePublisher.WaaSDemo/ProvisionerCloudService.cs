@@ -86,12 +86,6 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
 
-        [Required]
-        [Display(Name = "SubscriptionManagementCertificate", Order = 1)]
-        [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.Thumbprint", IgnoreWhenParsing = true)]
-        [CloudServiceCertificateAttribute(Name = "Composite.WindowsAzure.OpenCMS.Subscription", IsManagementCertificate=true)]
-        public string SubscriptionManagementCertificate { get; set; }
-
 
 
         [Required]
@@ -130,6 +124,12 @@ namespace SInnovations.AzurePublisher.WaaSDemo
         [Display(Name = "SubscriptionId", Order = 6, Description="This is the subscription that it will spin up new webroles on")]
         [Required]
         public string SubscriptionId { get; set; }
+
+        [Required]
+        [Display(Name = "SubscriptionManagementCertificate", Order = 7, Description = "Management Certificate for the subscription that host webroles")]
+        [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.Thumbprint", IgnoreWhenParsing = true)]
+        [CloudServiceCertificateAttribute(Name = "Composite.WindowsAzure.OpenCMS.Subscription", IsManagementCertificate = true, SubscriptionIdProviderPropertyName="SubscriptionId")]
+        public string SubscriptionManagementCertificate { get; set; }
 
 
 
