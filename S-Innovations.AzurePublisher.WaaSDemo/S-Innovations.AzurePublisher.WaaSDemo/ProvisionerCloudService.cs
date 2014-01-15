@@ -86,7 +86,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
 
-
+        [Required]
         [Display(Name = "SubscriptionManagementCertificate", Order = 1)]
         [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.Thumbprint", IgnoreWhenParsing = true)]
         [CloudServiceCertificateAttribute(Name = "Composite.WindowsAzure.OpenCMS.Subscription", IsManagementCertificate=true)]
@@ -94,7 +94,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
 
-
+        [Required]
         [DeploymentSetting(SettingName = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.CertificateThumbprint", IgnoreWhenParsing = true)]
         [Display(Name = "RemoteDebuggerCertificate", Order = 2)]
         [CloudServiceCertificateAttribute(Name = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation", IsDeploymentCertificate=true)]
@@ -102,7 +102,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
 
-
+        [Required]
         [Display(Name = "Blob Storage Connection String", Order = 3, Description="The blob storage that will host all deployments and websites")]
         public BlobStorageConnectionString ConnectionString { get; set; }
 
@@ -111,6 +111,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
         [DeploymentSetting(SettingName = "DnsMadeEasySecret")]
         [Display(Name = "DnsMadeEasySecret", Order = 5)]
+        [Required]
         public string DnsMadeEasySecret { get; set; }
 
 
@@ -118,6 +119,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
         [DeploymentSetting(SettingName = "DnsMadeEasyKey")]
         [Display(Name = "DnsMadeEasyKey", Order = 5)]
+        [Required]
         public string test { get; set; }
 
 
@@ -126,6 +128,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
         [WindowsAzureSubscription]
         [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.SubscriptionId")]
         [Display(Name = "SubscriptionId", Order = 6, Description="This is the subscription that it will spin up new webroles on")]
+        [Required]
         public string SubscriptionId { get; set; }
 
 
@@ -134,6 +137,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
         [ServiceBusConnectionString]
         [DeploymentSetting(SettingName = "Microsoft.ServiceBus.ConnectionString")]
         [Display(Name = "ServiceBus ConnectionString", Order = 7,Description="The servicebus to listen for messages on")]
+        [Required]
         public string ServiceBusConnectionString { get; set; }
 
     }
