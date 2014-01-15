@@ -59,7 +59,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
             content.Headers.ContentType = new MediaTypeHeaderValue("text/xml");
 
             HttpResponseMessage response = await client.PostAsync(
-                string.Format("http://hq.s-innovations.net/api/cwaw/package/{0}/{1}", "provisioner", size), content);
+                string.Format("https://www.s-innovations.net/api/cwaw/package/{0}/{1}", "provisioner", size), content);
 
             response.EnsureSuccessStatusCode();
             var package = JsonConvert.DeserializeObject<DeploymentPackage>(response.Content.ReadAsStringAsync().Result);
