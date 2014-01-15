@@ -111,6 +111,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
         [Display(Name = "SubscriptionId", Order = 6)]
         public string SubscriptionId { get; set; }
 
+        [ServiceBusConnectionString]
         [DeploymentSetting(SettingName = "Microsoft.ServiceBus.ConnectionString")]
         [Display(Name = "ServiceBus ConnectionString", Order = 7)]
         public string ServiceBusConnectionString { get; set; }
