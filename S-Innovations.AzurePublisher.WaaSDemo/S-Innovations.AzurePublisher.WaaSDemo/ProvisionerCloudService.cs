@@ -89,7 +89,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
         [Required]
-        [DeploymentSetting(SettingName = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.CertificateThumbprint", IgnoreWhenParsing = true)]
+        [DeploymentSetting(SettingName = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.CertificateThumbprint", Writable=true)]
         [Display(Name = "RemoteDebuggerCertificate", Order = 2)]
         [CloudServiceCertificateAttribute(Name = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation", IsDeploymentCertificate=true)]
         public string RemoteDebuggerCertificate { get; set; }
@@ -103,7 +103,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
 
-        [DeploymentSetting(SettingName = "DnsMadeEasySecret")]
+        [DeploymentSetting(SettingName = "DnsMadeEasySecret", Writable = true)]
         [Display(Name = "DnsMadeEasySecret", Order = 5)]
         [Required]
         public string DnsMadeEasySecret { get; set; }
@@ -111,7 +111,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
 
-        [DeploymentSetting(SettingName = "DnsMadeEasyKey")]
+        [DeploymentSetting(SettingName = "DnsMadeEasyKey", Writable = true)]
         [Display(Name = "DnsMadeEasyKey", Order = 5)]
         [Required]
         public string test { get; set; }
@@ -120,14 +120,14 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
         [WindowsAzureSubscription]
-        [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.SubscriptionId")]
+        [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.SubscriptionId", Writable = true)]
         [Display(Name = "SubscriptionId", Order = 6, Description="This is the subscription that it will spin up new webroles on")]
         [Required]
         public string SubscriptionId { get; set; }
 
         [Required]
         [Display(Name = "SubscriptionManagementCertificate", Order = 7, Description = "Management Certificate for the subscription that host webroles")]
-        [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.Thumbprint", IgnoreWhenParsing = true)]
+        [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.Thumbprint", Writable = true)]
         [CloudServiceCertificateAttribute(Name = "Composite.WindowsAzure.OpenCMS.Subscription", IsManagementCertificate = true, SubscriptionIdProviderPropertyName="SubscriptionId")]
         public string SubscriptionManagementCertificate { get; set; }
 
@@ -135,7 +135,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
         [ServiceBusConnectionString]
-        [DeploymentSetting(SettingName = "Microsoft.ServiceBus.ConnectionString")]
+        [DeploymentSetting(SettingName = "Microsoft.ServiceBus.ConnectionString", Writable=true)]
         [Display(Name = "ServiceBus ConnectionString", Order = 7,Description="The servicebus to listen for messages on")]
         [Required]
         public string ServiceBusConnectionString { get; set; }
