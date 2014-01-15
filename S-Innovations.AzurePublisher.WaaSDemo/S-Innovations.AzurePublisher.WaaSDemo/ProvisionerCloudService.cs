@@ -84,36 +84,56 @@ namespace SInnovations.AzurePublisher.WaaSDemo
             return true;
         }
 
+
+
+
         [Display(Name = "SubscriptionManagementCertificate", Order = 1)]
         [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.Thumbprint", IgnoreWhenParsing = true)]
         [CloudServiceCertificateAttribute(Name = "Composite.WindowsAzure.OpenCMS.Subscription", IsManagementCertificate=true)]
         public string SubscriptionManagementCertificate { get; set; }
+
+
+
 
         [DeploymentSetting(SettingName = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.CertificateThumbprint", IgnoreWhenParsing = true)]
         [Display(Name = "RemoteDebuggerCertificate", Order = 2)]
         [CloudServiceCertificateAttribute(Name = "Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation", IsDeploymentCertificate=true)]
         public string RemoteDebuggerCertificate { get; set; }
 
-        [Display(Name = "Blob Storage Connection String", Order = 3)]
+
+
+
+        [Display(Name = "Blob Storage Connection String", Order = 3, Description="The blob storage that will host all deployments and websites")]
         public BlobStorageConnectionString ConnectionString { get; set; }
+
+
 
 
         [DeploymentSetting(SettingName = "DnsMadeEasySecret")]
         [Display(Name = "DnsMadeEasySecret", Order = 5)]
         public string DnsMadeEasySecret { get; set; }
 
+
+
+
         [DeploymentSetting(SettingName = "DnsMadeEasyKey")]
         [Display(Name = "DnsMadeEasyKey", Order = 5)]
         public string test { get; set; }
 
+
+
+
         [WindowsAzureSubscription]
         [DeploymentSetting(SettingName = "Composite.WindowsAzure.OpenCMS.SubscriptionId")]
-        [Display(Name = "SubscriptionId", Order = 6)]
+        [Display(Name = "SubscriptionId", Order = 6, Description="This is the subscription that it will spin up new webroles on")]
         public string SubscriptionId { get; set; }
+
+
+
 
         [ServiceBusConnectionString]
         [DeploymentSetting(SettingName = "Microsoft.ServiceBus.ConnectionString")]
-        [Display(Name = "ServiceBus ConnectionString", Order = 7)]
+        [Display(Name = "ServiceBus ConnectionString", Order = 7,Description="The servicebus to listen for messages on")]
         public string ServiceBusConnectionString { get; set; }
 
     }
