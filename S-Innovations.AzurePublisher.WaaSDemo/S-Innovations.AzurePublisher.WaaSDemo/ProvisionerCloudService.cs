@@ -15,6 +15,8 @@ using System.Xml.Linq;
 
 namespace SInnovations.AzurePublisher.WaaSDemo
 {
+    #region BlobStorageConnectionString
+
     public class BlobStorageConnectionString : WindowsAzureBlobStorageCredentional
     {
 
@@ -38,6 +40,12 @@ namespace SInnovations.AzurePublisher.WaaSDemo
         public string ServiceName { get; set; }
         public string Name { get; set; }
     }
+
+    #endregion 
+
+
+
+
 
     [DisplayName("Provisioner Backend")]
     public class ProvisionerCloudService : ICloudServiceDeploymentModel, ICanUpgrade
@@ -104,7 +112,7 @@ namespace SInnovations.AzurePublisher.WaaSDemo
 
 
         [DeploymentSetting(SettingName = "DnsMadeEasySecret", Writable = true)]
-        [Display(Name = "DnsMadeEasySecret", Order = 5)]
+        [Display(Name = "DnsMadeEasySecret", Order = 5, Description = "Find it at dnsmadeasy.com, Config, Account Info")]
         [Required]
         public string DnsMadeEasySecret { get; set; }
 
